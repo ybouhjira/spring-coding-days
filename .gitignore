@@ -1,2 +1,4 @@
 _smarty/
 .sass-cache/
+.*.swo
+.*.swp

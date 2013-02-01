@@ -18,10 +18,6 @@
                 <li><a href="#">Contactez nous</a></li>
             </ul>
         </nav>
-        <div>
-            {block name=content}
-            {/block}
-        </div>
         <div class="jumbotron">
             <div class="imac-wrapper">
                 <img src="web/img/imac.png" alt="Sprinf Coding Days 3" />
@@ -29,6 +25,14 @@
             <div class="langs-canvas-wrapper center">
                 <canvas width="300" height="180" id="langs-canvas"></canvas>
                 <div class="button"> Inscrivez-vous! </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="left-col" class="column">
+                {block name=left_column}{/block} 
+            </div>
+            <div id="right-col" class="column">
+                {block name=right_column}{/block}
             </div>
         </div>
         <script src="/{$SUBDIR}/web/js/jquery-1.9.0.min.js"></script>
