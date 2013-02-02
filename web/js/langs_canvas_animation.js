@@ -22,17 +22,20 @@ $(function(){
     
     var t = 0;
     setInterval(function(){
-        ctx.shadowBlur = 2 + (t % 10);
+        ctx.shadowBlur = (Math.cos(t) + 1 ) * 10 ;
         t+=0.02;
+      
         // clear
         ctx.clearRect(0,0,canvas[0].width,canvas[0].height);
+        
         // update
         var inc = 0;
         for( i in langs ){
-            langs[i].x = Math.cos(t + inc)*90 +canvas.innerWidth()/4+20;
+            langs[i].x = Math.cos(t + inc)*90 +canvas.innerWidth()/4+29;
             langs[i].y = Math.sin(t + inc)*60 +canvas.innerHeight()/4+50;
             inc+=2;
         } 
+
         // draw
         ctx.lineWidth = 0.5 ;
         ctx.beginPath();
@@ -49,7 +52,7 @@ $(function(){
             ctx.fillText(langs[i].text, langs[i].x, langs[i].y);
         }
 
-    },15)
+    },30)
     
 
 });

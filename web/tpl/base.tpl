@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Spring Coding Days 3</title>
         <link rel="stylesheet" href="web/css/layout.css" />
+        {block name=stylesheets}{/block}
     </head>
     <body>
         <h1>
@@ -12,14 +13,14 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="#">Acceuil</a></li>
-                <li><a href="#">Plus d'infos</a></li>
-                <li><a href="#">Inscription</a></li>
-                <li><a href="#">Contactez nous</a></li>
+                <li><a href="/{$SUBDIR}/index.php">Acceuil</a></li>
+                <li><a href="/{$SUBDIR}/plus_dinfos.php">Plus d'infos</a></li>
+                <li><a href="/{$SUBDIR}/inscription.php">Inscription</a></li>
+                <li><a href="/{$SUBDIR}/contact.php">Contactez nous</a></li>
             </ul>
         </nav>
         <div class="jumbotron">
-            <div class="imac-wrapper">
+            <div class="imac-wrapper center">
                 <img src="web/img/imac.png" alt="Sprinf Coding Days 3" />
             </div>
             <div class="langs-canvas-wrapper center">

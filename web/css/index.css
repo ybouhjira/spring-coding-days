@@ -1,0 +1,10 @@
+#right-col li {
+  margin-bottom: 20px;
+  list-style: none;
+  overflow: auto; }
+
+#right-col ul {
+  padding: 0; }
+
+.float {
+  margin-top: 5px; }
