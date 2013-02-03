@@ -10,7 +10,7 @@ class Database extends PDO{
       * Constructor
       */
     public function __construct(){
-        $dsn = "mysql:host=localhost;dbname=smart_buy" ;
+        $dsn = "mysql:host=localhost;dbname=scd" ;
         $user = 'root' ;
         $pass = 'password' ;
         parent::__construct($dsn, $user,$pass);
