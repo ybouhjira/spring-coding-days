@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Spring Coding Days 3</title>
-        <link rel="stylesheet" href="web/css/layout.css" />
+        <link rel="stylesheet" href="/{$SUBDIR}/web/css/layout.css" />
         {block name=stylesheets}{/block}
     </head>
     <body>
@@ -21,7 +21,7 @@
         </nav>
         <div class="jumbotron">
             <div class="imac-wrapper center">
-                <img src="web/img/imac.png" alt="Sprinf Coding Days 3" />
+                <img src="/{$SUBDIR}/web/img/imac.png" alt="Spring Coding Days 3" />
             </div>
             <div class="langs-canvas-wrapper center">
                 <canvas width="300" height="180" id="langs-canvas"></canvas>
