@@ -2,3 +2,4 @@ _smarty/
 .sass-cache/
 .*.swo
 .*.swp
+web/css/*
