@@ -1,9 +1,11 @@
 <?php
 /**
- * This page is used to display a nice & fiendly error Message to the Administrator
- * when something bad happens
+ * This page is used to display a nice & fiendly error Message to the 
+ * Administrator when something bad happens
  * @author Youssef Bouhjira
  **/
+require_once 'config.php';
+require_once 'SmartySetup.class.php';
 class AdminErrorPage
 {
 
@@ -19,12 +21,7 @@ class AdminErrorPage
     public function __construct($message="")
     {
         if($message == ""){
-            $message = "Une erreur technique est survenue, ";
-            $message .= "veuillez contactez le webmaster.";
-            $message .= "<strong>e-mail : </strong>";
-            $message .= "<a href='mailto:b.youssef91@gmail.com'";
-            $message .= " class='btn btn-danger'>";
-            $message .= 'b.youssef91@gmail.com </a>' ;
+            $message = "Une erreur technique est survenue.";
         }
         $this->message = $message ;
     }

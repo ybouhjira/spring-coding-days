@@ -1,6 +1,7 @@
 <?php
-
-require_once SITEDIR ."/lib/Database.class.php";
+require_once "../lib/Database.class.php";
+require_once "../lib/HttpGetException.class.php";
+require_once "../lib/AdminErrorPage.class.php";
 
 /**
  * This Script check the username and password from POST and SESSION
@@ -21,16 +22,25 @@ try {
         $user = $_SESSION['user'];
         $pass = $_SESSION['pass'];
     } else {
-        throw new EXCeption();
+        throw new HttpGetException();
     }
-    
+
     // Check against data from the database
     $db = new Database();
-    $stm = $db->prepare('SELECT 1 FROM Admin WHERE username=? AND password=?');
+    $stm = $db->prepare('SELECT 1 FROM Admin WHERE username="?" AND password="?"');
     $stm->execute($user, $pass);
-    if($stm->rowCount() == 0)
-        throw new Exception();
-} catch (Exception $e) {
-    header('Location: /'.SUBDIR.'/admin/index.php?error');
+    if($stm->rowCount() == 0) {
+        throw new HttpGetException();
+    }
+
+    // Save the username and password in the session
+    $_SESSION['user'] = $user ;
+    $_SESSION['pass'] = $pass ;
+
+} catch (HttpGetException $e) {
+    header('Location: ./../../admin/index.php?error');
+} catch (PDOException $e) {
+    $errorPage = new AdminErrorPage();
+    $errorPage->display();
 }
 ?>

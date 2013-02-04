@@ -13,7 +13,7 @@
     {*--NAVBAR --------------------------------------------------------------- *}
     <div class="navbar primary-navbar">
       <div class="navbar-inner">
-        <a class="brand" href="/{$SUBDIR}">SmartBuy</a>
+        <a class="brand" href="/{$SUBDIR}">Spring Coding Days</a>
 
         {* NAVBAR BUTTONS AND DROPDOWNS----------------------------------------*}
         <ul class="nav">

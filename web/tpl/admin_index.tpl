@@ -23,13 +23,13 @@
                         <strong>Erreur!</strong> E-mail ou mot de passe erronés
                     </div>
                     {/if}
-                    <form action="controlers/login.php">
+                    <form action="panel.php" method="post" >
                         <div class="row-fluid">
                             <div class="input-prepend span12">
                                 <span class="add-on">
                                     <i class="icon-user"></i>
                                 </span>
-                                <input type="text" name="email" maxlength="45"
+                                <input type="text" name="user" maxlength="45"
                                     placeholder="Nom d'utilisateur"/>
                             </div>
                         </div>
