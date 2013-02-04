@@ -2,12 +2,14 @@
 <html>
 <head>
     <title>Espace d'administration</title>
-    <link href="/{$SUBDIR}web/css/panel.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../web/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" 
-        href="../web/bootstrap/css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="../web/css/admin_index.css" />
-    <script src="../web/bootstrap/js/bootstrap.min.js" ></script>
+        href="/{$SUBDIR}/web/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" 
+        href="/{$SUBDIR}/wweb/bootstrap/css/bootstrap-responsive.min.css" />
+    <link href="/{$SUBDIR}/wweb/css/admin_index.css" rel="stylesheet"/>
+    <link href="/{$SUBDIR}/web/css/panel.css" rel="stylesheet" />
+    <script src="/{$SUBDIR}/web/js/jquery-1.9.0.min.js"></script>
+    <script src="/{$SUBDIR}/web/bootstrap/js/bootstrap.min.js" ></script>
 </head>
 <body>
     {*--NAVBAR --------------------------------------------------------------- *}
@@ -20,24 +22,13 @@
             <li class="active">
                 <a href="#"><i class="icon-home"></i> Acceuil </a>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-shopping-cart"></i> Produits 
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                    <a href="product_add.php"> 
-                        <i class="icon-plus"></i> Ajouter un produit
-                    </a>
-                </li>
-                <li>
-                    <a href="product_list.php">
-                        <i class="icon-th-list"></i> Parcourir tous les produits
-                    </a>
-                </li>
-              </ul>
+            <li>
+                <a href="#"><i class="icon-envelope"></i> Messages</a>
             </li>
+            <li>
+                <a href="#"><i class="icon-user"></i> Inscriptions</a>
+            </li>
+            <li><a href="#"><i class="icon-wrench"></i> Administrateurs </a></li>
         </ul>
 
         {* OPTIONS ------------------------------------------------------------*}
@@ -51,7 +42,9 @@
                 <a href="#"><i class="icon-user"></i> Se deconnecter</a>
             </li>
             <li>
-                <a href="#"><i class="icon-lock"></i> Changer les identifiants</a>
+                <a href="#">
+                    <i class="icon-lock"></i> Changer les identifiants
+                </a>
             </li>
         </ul>
     </div>

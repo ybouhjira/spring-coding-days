@@ -3,7 +3,7 @@
  * The form class
  * @author Youssef Bouhjira
  **/
-require_once 'FormException.class.php';
+require_once 'FormValidationException.class.php';
 
 class Form
 {
@@ -48,7 +48,7 @@ class Form
     public function validate($stopAtFirst=true) {
 
         $first = array_shift($this->inputValidators);
-        $exception = new FormException();
+        $exception = new FormValidationException();
         // The array containing the submitted data
         $data;
         if($first instanceof FileIn)

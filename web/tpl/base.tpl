@@ -25,7 +25,9 @@
             </div>
             <div class="langs-canvas-wrapper center">
                 <canvas width="300" height="180" id="langs-canvas"></canvas>
-                <div class="button"> Inscrivez-vous! </div>
+                <div class="button">
+                    <a href="inscription.php"> Inscrivez-vous! </a>
+                </div>
             </div>
         </div>
         <div id="content">
