@@ -27,9 +27,10 @@ try {
 
     // Check against data from the database
     $db = new Database();
-    $stm = $db->prepare('SELECT 1 FROM Admin WHERE username="?" AND password="?"');
-    $stm->execute($user, $pass);
+    $stm = $db->prepare('SELECT 1 FROM Admin WHERE username=? AND password=?');
+    $stm->execute(array($user, $pass));
     if($stm->rowCount() == 0) {
+        die("dfgkjfg");
         throw new HttpGetException();
     }
 
@@ -38,7 +39,7 @@ try {
     $_SESSION['pass'] = $pass ;
 
 } catch (HttpGetException $e) {
-    header('Location: ./../../admin/index.php?error');
+    header('Location: index.php?error');
 } catch (PDOException $e) {
     $errorPage = new AdminErrorPage();
     $errorPage->display();
