@@ -87,7 +87,9 @@ class Form
     }
 
     /**
-     * Adds an InputValidator to the Form
+     * Adds inputs to the Form
+     * @param $input : a single input as paramter or a simple numerical array
+     * of inputs
      **/
     public function addInput($input) {
         if(is_array($input)){
@@ -104,20 +106,23 @@ class Form
     }
 
     /**
-     * Remove an InputValidator from the Form
+     * Remove an Input from the Form
      **/
     public function removeInput($name) {
         unset($this->inputValidators[$name]);
     }
 
     /**
-     * Returns the InputValidator 
+     * Returns the Input
      **/
     public function getInput($name) {
         return $this->inputValidators[$name];
     }
 
     // PRIVATE METHODES
+    /**
+     * Returns the name of the input
+     */
     static private function mapInputToName($input){
         return $input->getName();
     }

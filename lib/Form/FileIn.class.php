@@ -14,8 +14,8 @@ class FileIn extends Input
     var $maxSize;
 
     /**
-     * The mime type
-     *
+     * A regular expression matching the valid mime types for 
+     * this file
      * @var string
      **/
     var $mimeType;

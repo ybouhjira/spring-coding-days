@@ -1,8 +1,7 @@
 <?php
 require_once 'Input.class.php';
 /**
- * This class allows us to check the validity of a date input according to the 
- * date format we set
+ * This class allows us to check the validity of a date input  
  * @author Youssef Bouhjira
  **/
 class DateIn extends Input
@@ -24,8 +23,8 @@ class DateIn extends Input
 // METHODES
     /**
      * Constructor
-     * @param minDate (string) : the minimum date in the format $format
-     * @param maxDate (string) : the maximum date in the format $format
+     * @param minDate (string) : the minimum date 
+     * @param maxDate (string) : the maximum date 
      **/
     public function __construct( $minDate, $maxDate, $name, $errorMessage="",
         $required=true ) 
@@ -68,11 +67,12 @@ class DateIn extends Input
      **/
     static private function isValidDate($date)
     {
+        // DD-MM-YYYY(19.. & 20..) separators ./-
         $p='/^(0?[1-9]|[12][0-9]|3[01])([.\/-])(0?[1-9]|1[012])\2(19|20)\d\d$/';
-        if(preg_match($p, $date)){
+        if(preg_match($p, $date)) {
             $dateArray = preg_split('/[.\/-]/', $date);
             return checkdate($dateArray[1],$dateArray[0],$dateArray[2]);
-        }else{
+        } else {
             return false;
         }
     }

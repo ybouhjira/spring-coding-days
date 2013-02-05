@@ -37,6 +37,8 @@ class PregIn extends Input
             case 'EMAIL':
                 $regexp = '[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}';
                 break;
+            default: 
+                die('PregIn - ERROR : Invalide regexp name');
             }
         return '/^(?=.{'.$minlen.','.$maxlen.'}$)'.$regexp.'$/'.$params ;
     }
