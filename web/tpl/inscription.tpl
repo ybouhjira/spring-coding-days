@@ -1,24 +1,29 @@
-{extends file="$SITEDIR/web/tpl/base.tpl"}
+{extends "$SITEDIR/web/tpl/base.tpl"}
 
-{block name=stylesheets }
+{block stylesheets }
 <link rel="stylesheet" href="/{$SUBDIR}/web/css/inscription.css" />
 {/block }
 
-{block name=left_column }
+{block scripts}
+<script src="/{$SUBDIR}/web/js/inscription.form_toggle.js"></script>
+{/block}
+
+{block left_column }
 <h2> Inscription </h2>
-<form action="#">
+<form action="#" id="inscrip-form">
     {* EQUIPE ----------------------------------------------------------------*}
     <fieldset>
         <legend>Equipe</legend> 
         <div class="row">
             <label>
-                <input name="equipe" type="radio" />
+                <input name="equipe" type="radio" value="binome" id="bin-radio"/>
                 Binôme
             </label>
         </div>
         <div class="row">
             <label>
-                <input name="equipe" type="radio" checked="checked" />
+                <input name="equipe" type="radio" checked="checked"
+                    value="monome"/>
                 Monôme
             </label>
         </div>
@@ -36,7 +41,7 @@
 
     {* BINOME 1 ---------------------------------------------------------------*}
     {for $i=1 to 2 }
-        <fieldset>
+        <fieldset id="fieldset-bin{$i}">
             <legend>Binôme {$i}</legend>
             <div class="row">
                 <label>Nom : </label>
@@ -84,6 +89,6 @@
     <div class="row center"><input type="submit" value="Envoyer" /></div>
 {/block }
 
-{block name=right_column }
+{block right_column }
 {include "{$SITEDIR}/web/tpl/contact_info.tpl"}
 {/block }

@@ -40,5 +40,6 @@
         </div>
         <script src="/{$SUBDIR}/web/js/jquery-1.9.0.min.js"></script>
         <script src="/{$SUBDIR}/web/js/langs_canvas_animation.js"></script>
+        {block scripts}{/block}
     </body>
 </html>
