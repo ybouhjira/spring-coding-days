@@ -23,16 +23,10 @@ class MessagePage
     private $template;
 
     /**
-     * The css classs
-     * @var string
-     */
-    private $cssClass;
-
-    /**
      * Constructor
      **/
     public function __construct($tpl = "{SITEDIR}web/tpl/admin_error.tpl",
-        $message="Une erreur technique est survenue.", $cssClass="error")
+        $message="Une erreur technique est survenue.")
     {
         $this->message = $message ;
         $this->template = $tpl;
@@ -46,7 +40,6 @@ class MessagePage
     {
         $smarty = new SmartySetup();
         $smarty->assign('errorMessage',$this->message);
-        $smarty->assign('cssclass',$this->cssClass);
         ob_end_clean(); //< clean previously echoed text
         $smarty->display($this->template);
         die();

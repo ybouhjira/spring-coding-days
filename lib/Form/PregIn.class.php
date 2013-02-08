@@ -55,8 +55,7 @@ class PregIn extends Input
     /**
      * Constructor
      */
-    public function __construct($regex, $name, $errorMessage="", $required=true)
-    {
+    public function __construct($regex, $name, $errorMessage="", $required=true){
         parent::__construct($name,$errorMessage,$required);
         $this->regex = $regex;
     }
@@ -65,17 +64,16 @@ class PregIn extends Input
      * reimplemented from InputValidator::validate()
      * @return true on success & false otherwise
      **/
-    public function validate($value)
-    {
+    public function validate($value) {
         return preg_match($this->regex, $value);
     }
 
     // GETTERS AND SETTERS
-    public function getRegex(){
+    public function getRegex() {
         return $this->regex;
     }
 
-    public function setRegex($regex){
+    public function setRegex($regex) {
         $this->regex = $regex;
     }
     

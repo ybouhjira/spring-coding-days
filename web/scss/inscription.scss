@@ -23,11 +23,12 @@ label {
 input[type="radio"] + label {
     display: inline
 }
+
 input[type="submit"], input[type="radio"] {
     width: auto;
 }
 
-input, textarea {
+input:not([type="checkbox"]):not([type="radio"]), textarea {
     width: 90%;
     margin-left: 20px;
     resize: none;

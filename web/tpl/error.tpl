@@ -1,8 +1,7 @@
 {extends "$SITEDIR/web/tpl/base.tpl"}
 
 {block left_column}
-<h2>Message : </h2>
-<div class="{$cssclass}"> {$errorMessage} </div>
+{$errorMessage}
 {/block}
 
 {block right_column}

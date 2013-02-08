@@ -68,13 +68,9 @@ class DateIn extends Input
     static private function isValidDate($date)
     {
         // DD-MM-YYYY(19.. & 20..) separators ./-
-        $p='/^(0?[1-9]|[12][0-9]|3[01])([.\/-])(0?[1-9]|1[012])\2(19|20)\d\d$/';
-        if(preg_match($p, $date)) {
-            $dateArray = preg_split('/[.\/-]/', $date);
-            return checkdate($dateArray[1],$dateArray[0],$dateArray[2]);
-        } else {
-            return false;
-        }
+        // $p='/^(19|20)\d\d([.\/-])(0?[1-9]|1[012])\3(0?[1-9]|[12][0-9]|3[01])$/';
+        $dateArray = preg_split('/[.\/-]/', $date);
+        return checkdate($dateArray[1],$dateArray[2],$dateArray[0]);
     }
 
     /**
@@ -95,9 +91,9 @@ class DateIn extends Input
         }
         
         // compare years
-        if($maxDate[2] > $minDate[2])
+        if($maxDate[0] > $minDate[0])
             return true;
-        elseif($minDate[2] > $maxDate[2])
+        elseif($minDate[0] > $maxDate[0])
             return false;
         // compare months
         if($maxDate[1] > $minDate[1])
@@ -105,9 +101,9 @@ class DateIn extends Input
         elseif($minDate[1] > $maxDate[1])
             return false;
         // compare days
-        if($maxDate[0] > $minDate[0])
+        if($maxDate[2] > $minDate[2])
             return true;
-        elseif($minDate[0] > $maxDate[0])
+        elseif($minDate[2] > $maxDate[2])
             return false;
 
         return true;

@@ -1,7 +1,7 @@
 <?php
 require_once "../lib/Database.class.php";
 require_once "../lib/HttpGetException.class.php";
-require_once "../lib/ErrorPage.class.php";
+require_once "../lib/MessagePage.class.php";
 
 /**
  * This Script check the username and password from POST and SESSION
@@ -41,7 +41,7 @@ try {
 } catch (HttpGetException $e) {
     header('Location: index.php?error');
 } catch (PDOException $e) {
-    $errorPage = new ErrorPage();
+    $errorPage = new MessagePage();
     $errorPage->display();
 }
 ?>

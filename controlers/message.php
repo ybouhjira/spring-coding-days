@@ -25,8 +25,10 @@ try {
     ));
 
     // Display success page
-    $msg = "Votre message a été envoyé avec succès";
-    $page = new Messagepage("../web/tpl/error.tpl",$msg,"succes-message");
+    $msg = "<h2>Message : </h2>"
+        ."<div class='succes-message'>"
+        ."Votre message a été envoyé avec succès</div>";
+    $page = new Messagepage("../web/tpl/error.tpl");
     $page->display();
 
     // Exceptions handeling
