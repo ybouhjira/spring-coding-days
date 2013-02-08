@@ -14,6 +14,7 @@ class Database extends PDO{
         $user = 'root' ;
         $pass = 'password' ;
         parent::__construct($dsn, $user,$pass);
+        $this->query("SET NAMES 'utf8'");
     }
 
     /**
