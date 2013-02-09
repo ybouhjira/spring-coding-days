@@ -1,7 +1,7 @@
 <?php
-require_once "../lib/Database.class.php";
-require_once "../lib/HttpGetException.class.php";
-require_once "../lib/MessagePage.class.php";
+require_once SITEDIR . "/lib/Database.class.php";
+require_once SITEDIR . "/lib/HttpGetException.class.php";
+require_once SITEDIR . "/lib/MessagePage.class.php";
 
 /**
  * This Script check the username and password from POST and SESSION

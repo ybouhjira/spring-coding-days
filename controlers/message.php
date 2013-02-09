@@ -28,7 +28,7 @@ try {
     $msg = "<h2>Message : </h2>"
         ."<div class='succes-message'>"
         ."Votre message a été envoyé avec succès</div>";
-    $page = new Messagepage("../web/tpl/error.tpl");
+    $page = new Messagepage("../web/tpl/error.tpl", $msg);
     $page->display();
 
     // Exceptions handeling

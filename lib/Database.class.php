@@ -23,10 +23,7 @@ class Database extends PDO{
       */
     public function fetchObjects($query){
         $statement = $this->query($query);
-        $rows = false;
-        if($statement)
-            $rows = $statement->fetchAll(PDO::FETCH_OBJ);
-        return $rows;
+        return $statement->fetchAll(PDO::FETCH_OBJ);
     }
 
     /**

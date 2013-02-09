@@ -45,30 +45,6 @@
         </div>
     </fieldset>
 
-    {* LIEU DES QUALIFICATIONS ------------------------------------------------*}
-    <fieldset>
-        <legend>Lieu des qualifications </legend>
-        <div class="row">
-            <label>
-                <input type="radio" name="lieu" checked="checked"
-                    value="Essaouira"/>
-                Essaouira (EST)
-            </label>
-        </div>
-        <div class="row">
-            <label>
-                <input type="radio" name="lieu" value="Safi"/>
-                Safi (ENSA)
-            </label>
-        </div>
-        <div class="row">
-            <label>
-                <input type="radio" name="lieu" value="Marrakech"/>
-                Marrakech (FST)
-            </label>
-        </div>
-    </fieldset>
-
     {* BINOMES ----------------------------------------------------------------*}
     {for $i=1 to 2 }
         <fieldset id="fieldset-bin{$i}">

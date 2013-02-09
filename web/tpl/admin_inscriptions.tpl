@@ -1,0 +1,27 @@
+{extends "/$SITEDIR/web/tpl/admin_base.tpl"}
+
+{block active_inscriptions}active{/block}
+{block content}
+    <table class="table table-bordered" >
+    <tr>
+        <td></td>
+        <td>Nom</td>
+        <td>Prénom</td>
+        <td>Etablissement</td>
+        <td>Ville</td>
+        <td>Niveau</td>
+        <td>Equipe</td>
+    </tr>
+    {foreach $particips as $p}
+    <tr>
+        <td style="width:1%"><a href="" class="btn"><i class="icon-file"></i></a></td>
+        <td>{$p->nom|escape}</td>
+        <td>{$p->prenom|escape}</td>
+        <td>{$p->etab|escape}</td>
+        <td>{$p->ville|escape}</td>
+        <td>{$p->niveau|escape}</td>
+        <td>{$p->id_equipe|escape}</td>
+    </tr>
+    {/foreach}
+    </table>
+{/block}
