@@ -30,11 +30,8 @@
                         </a>
                     </li>
                     <li class="{block active_inscriptions}{/block}">
-                        <a href="inscriptions.php"><i class="icon-user"></i> Inscriptions</a>
-                    </li>
-                    <li class="{block active_administrateurs}{/block}">
-                        <a href="administrateurs.php">
-                            <i class="icon-wrench"></i> Administrateurs 
+                        <a href="inscriptions.php">
+                            <i class="icon-user"></i> Inscriptions
                         </a>
                     </li>
                 </ul>
@@ -50,7 +47,7 @@
                             <a href="#"><i class="icon-user"></i> Se deconnecter</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/{$SUBDIR}/admin/edit_admin.php">
                                 <i class="icon-lock"></i> Changer les identifiants
                             </a>
                         </li>

@@ -44,8 +44,6 @@ try {
     // inserting team members
     $teamId = $db->lastInsertId();
     for($i=1; $i <= $count; $i++ ) {
-        // upload files
-        $carte = file_get_contents($_FILES["carte$i"]['tmp_name']);
         $db->insert('Participant', array (
             "nom" => $_POST["nom$i"],
             "prenom" => $_POST["prenom$i"],
@@ -56,9 +54,15 @@ try {
             "etab" => $_POST["etab$i"],
             "filliere" => $_POST["filliere$i"],
             "niveau" => $_POST["niveau$i"],
-            "carte" => $carte,
             "id_equipe" => $teamId
         ));
+        
+        // upload files
+        $participId = $db->lastInsertId();
+        move_uploaded_file (
+            $_FILES["carte$i"]['tmp_name'],
+            SITEDIR."/uploads/$participId.jpg"
+        );
     }
 
     $pg = new MessagePage('../web/tpl/error.tpl',

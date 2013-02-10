@@ -2,7 +2,7 @@
 
 {block active_inscriptions}active{/block}
 {block content}
-    <table class="table table-bordered" >
+<table class="table table-bordered" >
     <tr>
         <td></td>
         <td>Nom</td>
@@ -14,7 +14,12 @@
     </tr>
     {foreach $particips as $p}
     <tr>
-        <td style="width:1%"><a href="" class="btn"><i class="icon-file"></i></a></td>
+        <td style="width:1%">
+            <a href="details.php?id={$p->id_participant}" class="btn">
+                <i class="icon-file">
+                </i>
+            </a>
+        </td>
         <td>{$p->nom|escape}</td>
         <td>{$p->prenom|escape}</td>
         <td>{$p->etab|escape}</td>
@@ -23,5 +28,5 @@
         <td>{$p->id_equipe|escape}</td>
     </tr>
     {/foreach}
-    </table>
+</table>
 {/block}
