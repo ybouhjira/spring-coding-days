@@ -7,7 +7,7 @@
 {block name=left_column}
 <h2>C'est quoi Spring Coding Days</h2>
 <p>
-    <img src="web/img/scd2.jpg" alt="Affiche Spring Coding Days" class="float"/>
+    <img src="web/img/scd3.jpg" alt="Affiche Spring Coding Days" class="float"/>
     Chaque année, le club informatique de l'ESTE organise une édition de Spring
     Coding Days pour la compétition en programmation C/C++ et JAVA .
 </p>
@@ -30,9 +30,7 @@
     suivante :
     <a href="mailto:club.info.este@gmail.com"> club.info.este@gmail.com </a>
 </p>
-
 {/block}
-
 
 {block name=right_column}
 <h2>Comité d'organisation</h2>
@@ -42,40 +40,32 @@
         Professeur
     </li>
     <li>
-        <strong>Mouiguina Abdelfatah</strong><br>
-        Administrateur
-    </li>
-    <li>
-        <strong>Sabraoui Ayoub</strong><br>
-        Administrateur
-    </li>
-    <li>
-        <strong>H'sain Hamza</strong><br>
-        Etudiant(e) en génie informatique 2ème année
-    </li>
-    <li>
-        <strong>Taifour Amina</strong><br>
-        Etudiant(e) en génie informatique 2ème année
-    </li>
-    <li>
-        <strong>Chouima Chafika</strong><br>
-        Etudiant(e) en génie informatique 1ère année
-    </li>
-    <li>
-        <strong>Boulahna Ilhame</strong><br>
-        Etudiant(e) en génie informatique 1ère année
-    </li>
-    <li>
         <strong>Bouhjira Youssef</strong><br>
-        Etudiant(e) en génie informatique 1ère année
+        Etudiant en génie informatique 2ème année
     </li>
     <li>
-        <strong>Doulfakar Mohammed</strong><br>
-        Etudiant(e) en génie informatique 1ère année
+        <strong>Bendaida Fatiha</strong><br>
+        Etudiante en génie informatique 2ème année
+    </li>
+    <li>
+        <strong>Elkhaldouni Sakina </strong><br>
+        Etudiante en génie informatique 2ème année
     </li>
     <li>
         <strong>Achbbak Mohammed Siraj</strong><br>
-        Etudiant(e) en génie informatique 1ère année
+        Etudiant en génie informatique 2ème année
+    </li>
+    <li>
+        <strong>Boulahna Ilhame</strong><br>
+        Etudiante en génie informatique 2ème année
+    </li>
+    <li>
+        <strong>El Oissifi Ahmed</strong><br>
+        Etudiant en génie informatique 2ème année
+    </li>
+    <li>
+        <strong>Igmoullane Yassine</strong><br>
+        Etudiant en génie informatique 1ère année
     </li>
 </ul>
 {/block}

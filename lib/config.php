@@ -1,6 +1,6 @@
 <?php
 define('HTDOCS', $_SERVER["DOCUMENT_ROOT"].'/');
-define("SUBDIR", "spring_coding_days");
+define("SUBDIR", "scd");
 define("SITEDIR", HTDOCS . SUBDIR);
 
 // AUTOLOAD FUNCTION 
