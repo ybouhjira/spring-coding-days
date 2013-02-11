@@ -30,7 +30,6 @@ try {
     $stm = $db->prepare('SELECT 1 FROM Admin WHERE username=? AND password=?');
     $stm->execute(array($user, $pass));
     if($stm->rowCount() == 0) {
-        die("dfgkjfg");
         throw new HttpGetException();
     }
 

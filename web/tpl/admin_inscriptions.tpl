@@ -2,6 +2,7 @@
 
 {block active_inscriptions}active{/block}
 {block content}
+
 <table class="table table-bordered" >
     <tr>
         <td></td>
@@ -11,6 +12,7 @@
         <td>Ville</td>
         <td>Niveau</td>
         <td>Equipe</td>
+        <td>PC</td>
     </tr>
     {foreach $particips as $p}
     <tr>
@@ -26,6 +28,13 @@
         <td>{$p->ville|escape}</td>
         <td>{$p->niveau|escape}</td>
         <td>{$p->id_equipe|escape}</td>
+        <td>
+            {if $p->pc}
+                <i class="icon-ok"></i>
+            {else}
+                <i class="icon-remove"></i>
+            {/if}
+        </td>
     </tr>
     {/foreach}
 </table>

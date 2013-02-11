@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <td>E-mail</td>
-            <td>{$msg->email|escape}</td>
+            <td><a href="mailto:{$msg->email|escape}">{$msg->email|escape}</a></td>
         </tr>
         <tr>
             <td>Message</td>

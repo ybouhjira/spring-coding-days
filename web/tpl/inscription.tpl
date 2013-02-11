@@ -51,59 +51,49 @@
             <legend>Binôme {$i}</legend>
             <div class="row">
                 <label>Nom : </label>
-                <input name="nom{$i}" type="text" required="required"
-                    maxlength="45"/>
+                <input name="nom{$i}" type="text" maxlength="45"/>
             </div>
             <div class="row">
                 <label>Prénom : </label>
-                <input name="prenom{$i}" type="text" required="required"
-                    maxlength="45"/>
+                <input name="prenom{$i}" type="text" maxlength="45"/>
             </div>
             <div class="row">
                 <label>Date de naissance : </label>
-                <input name="date_naiss{$i}" type="date" required="required"
+                <input name="date_naiss{$i}" type="date" 
                     maxlength="45" placeholder="YYYY-MM-JJ"/>
             </div>
             <div class="row">
                 <label>Adresse : </label>
-                <textarea  name="adresse{$i}" required="required"
-                    maxlength="500">
+                <textarea  name="adresse{$i}" maxlength="500">
                 </textarea>
             </div>
             <div class="row">
                 <label>Ville : </label>
-                <input name="ville{$i}" type="text" required="required"
-                    maxlength="45"/>
+                <input name="ville{$i}" type="text" maxlength="45"/>
             </div>
             <div class="row">
                 <label>Numéro de téléphone : </label>
-                <input  name="tel{$i}" required="required"
-                    type="text"maxlength="20"/>
+                <input  name="tel{$i}" type="text" maxlength="20"/>
             </div>
             <div class="row">
                 <label>e-mail : </label>
-                <input  name="email{$i}" required="required"
-                    type="email" maxlength="45"/>
+                <input  name="email{$i}" type="email" maxlength="45"/>
             </div>
             <div class="row">
                 <label>Etablissement : </label>
-                <input name="etab{$i}" type="text" required="required"
-                    maxlength="45"/>
+                <input name="etab{$i}" type="text" maxlength="45"/>
             </div>
             <div class="row">
                 <label>Fillière : </label>
-                <input name="filliere{$i}" type="text" required="required"
-                    maxlength="45"/>
+                <input name="filliere{$i}" type="text" maxlength="45"/>
             </div>
             <div class="row">
                 <label>Niveau : </label>
-                <input name="niveau{$i}" type="text" required="required"
-                    maxlength="45"/>
+                <input name="niveau{$i}" type="text" maxlength="45"/>
             </div>
             <div class="row">
                 <label>Carte d'étudiant : (PNG/JPEG max:2Mo)</label>
-                <input name="carte{$i}" type="file" required="required" 
-                    maxlength="45"/>
+                <input name="carte{$i}" type="file" maxlength="45"/>
             </div>
         </fieldset>
     {/for}

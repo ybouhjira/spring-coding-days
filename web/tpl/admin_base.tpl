@@ -44,7 +44,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#"><i class="icon-user"></i> Se deconnecter</a>
+                            <a href="/{$SUBDIR}/admin/logout.php">
+                            <i class="icon-user"></i> Se deconnecter</a>
                         </li>
                         <li>
                             <a href="/{$SUBDIR}/admin/edit_admin.php">

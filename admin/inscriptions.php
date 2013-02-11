@@ -8,7 +8,7 @@ require_once '../lib/MessagePage.class.php';
 try {
     $db = new Database();
     $particips = $db->fetchObjects(
-       'SELECT * FROM Participant '.
+       'SELECT * FROM Participant NATURAL JOIN Equipe '.
        'ORDER BY id_equipe');
     
     $smarty = new SmartySetup();
