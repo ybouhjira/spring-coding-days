@@ -36,7 +36,6 @@
 
 {block name=right_column}
 <h2>Comité d'organisation</h2>
-
 <ul>
     <li>
         <strong>Khalil Karima</strong><br>
