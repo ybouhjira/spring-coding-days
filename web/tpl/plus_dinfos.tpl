@@ -28,7 +28,7 @@
     assurer des hébergements par parrainage des étudiants dans la limite des
     places disponibles. Pour plus d’informations, veuillez contacter l’adresse
     suivante :
-    <a href="mailto:club.info.este@gmail.com"> club.info.este@gmail.com </a>
+    <a href="mailto:club.este.info@gmail.com"> club.este.info@gmail.com </a>
 </p>
 {/block}
 

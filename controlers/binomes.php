@@ -27,8 +27,7 @@ try {
             new PregIn('/^.{3,45}$/', "etab$i"),
             new PregIn('/^.{3,45}$/', "filliere$i"),
             new PregIn('/^.{1,45}$/', "niveau$i"),
-            new PregIn(PregIn::exp('ALSPC',45),"ville$i"),
-            new FileIn(2 * 1024 * 1024, '/^image\/(png|jpeg)$/', "carte$i")
+            new PregIn(PregIn::exp('ALSPC',45),"ville$i")
         ));
     }
     $form->validate();
@@ -57,12 +56,6 @@ try {
             "id_equipe" => $teamId
         ));
         
-        // upload files
-        $participId = $db->lastInsertId();
-        move_uploaded_file (
-            $_FILES["carte$i"]['tmp_name'],
-            SITEDIR."/uploads/$participId.jpg"
-        );
     }
 
     $pg = new MessagePage('../web/tpl/error.tpl',
@@ -91,10 +84,8 @@ try {
         $message ="Fillière invalide";
     } elseif(preg_match('/^niveau/', $err)) {
         $message ="Niveau invalide";
-    } elseif(preg_match('/^carte/', $err)) {
-        $message ="Le fichier de la carte doit être PNG ou JPEG et ne doit pas".
-           "dépasser 2Mo" ;
     }
+     
     $message = "<h2>Inscription : </h2><div class='error'>$message</div>";
     $errorPg = new MessagePage('../web/tpl/error.tpl',$message);
     $errorPg->display();

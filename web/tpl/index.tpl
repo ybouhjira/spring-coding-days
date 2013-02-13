@@ -7,7 +7,7 @@
 {block name=left_column}
 <h2>Le "Club Informatique" de l’ESTE vous souhaite la bienvenue</h2>
 <p>
-    Après la troisième édition de "Spring Coding Days " la compétition en
+    Après la deuxième édition de "Spring Coding Days " la compétition en
     programmation C/C++ et java, le club informatique de l’ESTE organise la 3ème
     édition de cette compétition et invite tous les étudiants ayant des
     connaissances au niveau de la programmation à s’inscrire en suivant 

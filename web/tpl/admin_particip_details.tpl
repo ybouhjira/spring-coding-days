@@ -39,10 +39,6 @@
         <td> {$particip->filliere|escape} </td>
     </tr>
     <tr>
-        <td>Carte</td>
-        <td><img src="/{$SUBDIR}/uploads/{$particip->id_participant}.jpg"/></td>
-    </tr>
-    <tr>
         <td>Ville</td>
         <td> {$particip->ville|escape} </td>
     </tr>

@@ -91,10 +91,6 @@
                 <label>Niveau : </label>
                 <input name="niveau{$i}" type="text" maxlength="45"/>
             </div>
-            <div class="row">
-                <label>Carte d'étudiant : (PNG/JPEG max:2Mo)</label>
-                <input name="carte{$i}" type="file" maxlength="45"/>
-            </div>
         </fieldset>
     {/for}
     {* BUTTON ENVOYER ----------------------------------------------------*}

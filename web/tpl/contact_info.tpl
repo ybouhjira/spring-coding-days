@@ -7,6 +7,6 @@
 <h3> Téléphone/Fax: </h3>
 <p> (+212)0524792648 </p>
 <h3> E-mail: </h3>
-<p> club.info.este@gmail.com </p>
+<p> club.este.info@gmail.com </p>
 <h3> Site Web: </h3>
 <p> <a href="www.este.ucam.ac.ma/scd">www.este.ucam.ac.ma/scd</a> </p>
